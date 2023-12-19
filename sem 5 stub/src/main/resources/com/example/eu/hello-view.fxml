@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="mainView" prefHeight="482.0" prefWidth="368.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox alignment="CENTER" layoutX="20.0" layoutY="20.0">
+         <children>
+            <Button fx:id="carButton" layoutX="20.0" onMouseClicked="#carButtonClicked" text="Car" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="rentalButton" mnemonicParsing="false" onMouseClicked="#rentalButtonClicked" text="Rental" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <ListView fx:id="listView" onMouseClicked="#listViewMouseClicked" prefHeight="126.0" prefWidth="305.0" />
+      <GridPane fx:id="gridPane" prefHeight="155.0" prefWidth="328.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" text="ID:">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="carID" mnemonicParsing="false" text="Car ID:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="manufacturer" mnemonicParsing="false" text="Manufacturer" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="startDate" mnemonicParsing="false" text="Start date:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="model" mnemonicParsing="false" text="Model:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="endDate" mnemonicParsing="false" text="End date:" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="textField1" GridPane.columnIndex="1" />
+            <TextField fx:id="textField2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textField3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="textField4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox alignment="TOP_CENTER" prefHeight="57.0" prefWidth="328.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#addButtonClicked" text="Add">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#deleteButtonClicked" text="Delete">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#updateButtonClicked" text="Update">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="58.0" prefWidth="405.0">
+         <children>
+            <Button minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#mostRentedCars" text="Most Rented Cars" />
+            <Button minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#rentalsMonth" text="Rentals per Month">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Button>
+            <Button minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#carsLonges" text="Cars with longest rental">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
