@@ -1,1 +1,1 @@
-Final Java Project done at University.
+This project simulates a car rental application, allowing users to perform key operations such as adding, deleting, and renting cars to customers. Additionally, the application provides features to visualize and analyze statistics related to car rentals.
